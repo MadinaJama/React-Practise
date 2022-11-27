@@ -7,15 +7,18 @@ function App() {
   return (
     <div>
       <Title />
-      <div className='todo__wrapper'>
-      <Todo title="Finish Fronted Simplified"
-      paragraph="Code along with frontend simplified step by step." />
-      <Todo title="Finish Interview Section"
-      paragraph="Finish every interview section in the next 6 weeks." />
-      <Todo title="Land a $100k Job"
-      paragraph="Apply to 100 jobs." />
+      <div>
+        <input type="text" onChange={(event) => {
+          console.log(event.target.value)
+        }} />
+        <button>Add todo</button>
       </div>
-      <Modal title="are you sure?"/> 
+      <div className='todo__wrapper'>
+      <Todo title="Finish Fronted Simplified" />
+      <Todo title="Finish Interview Section" />
+      <Todo title="Land a $100k Job" />
+      </div>
+      <Modal title="are you sure?"/>
     </div>
   );
 }
